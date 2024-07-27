@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/meet-mate/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/meet-mate/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/meet-mate",
+  "projects": {
+    "meet-mate": {
+      "type": "application",
+      "root": "apps/meet-mate",
+      "entryFile": "main",
+      "sourceRoot": "apps/meet-mate/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/meet-mate/tsconfig.app.json"
+      }
+    },
+    "event": {
+      "type": "application",
+      "root": "apps/event",
+      "entryFile": "main",
+      "sourceRoot": "apps/event/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/event/tsconfig.app.json"
+      }
+    },
+    "user": {
+      "type": "application",
+      "root": "apps/user",
+      "entryFile": "main",
+      "sourceRoot": "apps/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user/tsconfig.app.json"
+      }
+    }
+  }
+}
